@@ -34,7 +34,7 @@ class BatchRepository implements Ibatchrepository {
   Future<Either<Failures, bool>> deleteBatch(String batchId ) async {
       try{
         final model = BatchHiveModel.fromEntity(batch);
-      final result = await _dataSource.createBatch(model);
+      final result = await _dataSource.deleteBatch(model);
       if(result){
         return const Right(true);
       }

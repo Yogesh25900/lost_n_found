@@ -5,6 +5,9 @@ import 'package:lost_n_found/features/batch/domain/entities/batch_entity.dart';
 
 part 'batch_hive_model.g.dart';
 
+//dart run build_runner build -d
+
+
 @HiveType(typeId: HiveTableConstant.batchTypeId)
 class BatchHiveModel extends HiveObject {
 
@@ -31,4 +34,6 @@ class BatchHiveModel extends HiveObject {
       status: status,
     );
   }
+
+  static fromEntity(batch) {}
 }
