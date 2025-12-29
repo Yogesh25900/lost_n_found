@@ -1,21 +1,17 @@
 import 'package:equatable/equatable.dart';
 
-class BatchEntity extends Equatable {
-  // while adding we dont need the batchid ,only we need batchname
+class BatchEntity extends Equatable{
+
   final String? batchId;
   final String batchName;
   final String? status;
 
-
-  const BatchEntity({
+  BatchEntity({
     this.batchId,
     required this.batchName,
-    required this.status
+    this.status
   });
-
+  
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
-
+  List<Object?> get props => [batchId,batchName,status];
 }
-

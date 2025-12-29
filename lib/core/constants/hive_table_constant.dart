@@ -1,8 +1,13 @@
 class HiveTableConstant {
 
+  //private constructor to prevent instantiantion
+
   HiveTableConstant._();
 
   static const String dbName = "lost_n_found_db";
+
+  //we do the indexing for each table for faster searching and querying 
+  
 
   static const int batchTypeId =0;
   static const String batchTable = "batch_table";
